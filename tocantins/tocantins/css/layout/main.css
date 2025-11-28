@@ -1,0 +1,362 @@
+/* main.css - Versão Simplificada */
+:root {
+    --verde-principal: #2e7d32;
+    --verde-escuro: #1b5e20;
+    --verde-claro: #4caf50;
+    --destaque: #8bc34a;
+    --fundo: #f8fbf8;
+    --texto: #333;
+    --branco: #fff;
+    
+    --fonte: 'Segoe UI', Tahoma, sans-serif;
+    --espaco: 20px;
+    --borda: 10px;
+    --sombra: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte);
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header */
+.main-header {
+    background: var(--verde-principal);
+    color: var(--branco);
+    padding: var(--espaco);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-link {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: var(--destaque);
+}
+
+/* Banner */
+.hero-banner {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url(jalapao.jpeg) center/cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--branco);
+}
+
+.banner-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Seções */
+.content-section {
+    padding: 40px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--verde-escuro);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--destaque);
+    margin: 10px auto;
+}
+
+/* Grid e Cards */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--espaco);
+}
+
+.culture-card {
+    background: var(--branco);
+    border-radius: var(--borda);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+.card-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: var(--espaco);
+}
+
+.card-title {
+    color: var(--verde-principal);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.card-text {
+    margin-bottom: 10px;
+}
+
+/* Cards de Comida */
+.food-card {
+    background: var(--branco);
+    padding: var(--espaco);
+    border-radius: var(--borda);
+    box-shadow: var(--sombra);
+    text-align: center;
+    border-left: 4px solid var(--destaque);
+}
+
+.food-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Festival Cards */
+.festivals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--espaco);
+}
+
+.festival-card {
+    background: var(--branco);
+    border-radius: var(--borda);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+.festival-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+/* Estatísticas */
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+    background: var(--branco);
+    padding: 15px;
+    border-radius: var(--borda);
+    box-shadow: var(--sombra);
+    min-width: 120px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--verde-principal);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+}
+
+/* Curiosidades */
+.section-curiosities {
+    background: var(--verde-principal);
+    color: var(--branco);
+    padding: 40px 0;
+}
+
+.section-curiosities .section-title {
+    color: var(--branco);
+}
+
+.curiosities-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.curiosities-list {
+    list-style: none;
+}
+
+.curiosity-item {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.curiosity-item:last-child {
+    border-bottom: none;
+}
+
+.curiosity-highlight {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: var(--borda);
+    border-left: 4px solid var(--destaque);
+}
+
+.highlight-text {
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* Footer */
+.main-footer {
+    background: var(--verde-escuro);
+    color: var(--branco);
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text {
+    margin-bottom: 5px;
+}
+
+.footer-credits {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: var(--destaque);
+}
+
+/* Festival Info */
+.festival-info {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    font-size: 0.9rem;
+    color: var(--verde-escuro);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .banner-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .stats-grid {
+        gap: 15px;
+    }
+    
+    .festivals-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .curiosities-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .festival-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-image {
+        height: 180px;
+    }
+    
+    .festival-image {
+        height: 180px;
+    }
+    
+    .hero-banner {
+        height: 250px;
+    }
+}

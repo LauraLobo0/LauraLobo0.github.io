@@ -1,0 +1,249 @@
+
+:root {
+    --primary-color: #347512;
+    --primary-dark: #044f0a;
+    --primary-light: #30e833;
+    --background-color: #f4f7fbed;
+    --text-color: #333;
+    --white: #ffffff;
+    
+  
+    --font-family: Arial, Helvetica, sans-serif;
+    --line-height: 1.6;
+    
+   
+    --spacing-xs: 10px;
+    --spacing-sm: 15px;
+    --spacing-md: 20px;
+    --spacing-lg: 25px;
+    --spacing-xl: 40px;
+    
+  
+    --border-radius-sm: 8px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 12px;
+    
+ 
+    --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 8px 18px rgba(0, 0, 0, 0.15);
+    
+  
+    --transition-fast: 0.3s ease;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background: var(--background-color);
+    color: var(--text-color);
+    line-height: var(--line-height);
+}
+
+
+.header {
+    background: url(./layout/oz1p9oyjlti0ulfvdyjy.webp) center/cover no-repeat; 
+    color: var(--white);
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-md);
+    
+}
+
+.header__title {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 700;
+}
+
+.header__subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+.main {
+    width: 80%;
+    max-width: 1100px;
+    text-align: center;
+    margin:  auto;
+    font-size: 15px;
+   
+    
+}
+
+
+.main__description {
+    
+    font-size: 1%;
+    margin-bottom: var(--spacing-xl);
+   color: #000;
+    
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+
+.card {
+    background: var(--white);
+    width: 300px; /* tamanho reduzido */
+    padding: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-light);
+    transition: transform var(--transition-fast), 
+                box-shadow var(--transition-fast);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-md);
+    margin-bottom: var(--spacing-sm);
+    display: block;
+}
+
+.card__title {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.card__text {
+    line-height: var(--line-height);
+    font-size: 1.05rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+}
+
+.card__button {
+    display: inline-block;
+    background: var(--primary-light);
+    color: var(--white);
+    text-decoration: none;
+    padding: var(--spacing-xs) 18px;
+    border-radius: var(--border-radius-sm);
+    transition: background-color var(--transition-fast);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.card__button:hover {
+    background: var(--primary-dark);
+}
+
+
+.footer {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.footer__text {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer__icon {
+    font-size: 24px;
+    margin: 0 var(--spacing-xs);
+    opacity: 0.9;
+    cursor: pointer;
+    transition: opacity var(--transition-fast);
+}
+
+.footer__icon:hover {
+    opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+    :root {
+        --spacing-xl: 30px;
+        --spacing-lg: 20px;
+    }
+    
+    .header__title {
+        font-size: 2rem;
+    }
+    
+    .main__title {
+        font-size: 1.8rem;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .header__title {
+        font-size: 1.8rem;
+    }
+    
+    .header__subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .main__title {
+        font-size: 1.6rem;
+    }
+    
+    .main__description {
+        font-size: 1rem;
+    }
+    
+    .card__title {
+        font-size: 1.3rem;
+    }
+    
+    .card__text {
+        font-size: 1rem;
+    }
+    
+    .card {
+        padding: var(--spacing-md);
+        margin: var(--spacing-md) 0;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
